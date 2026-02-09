@@ -1,0 +1,17 @@
+{
+    "name": "antigravity-utube-variations",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "npm run dev --workspace=@utube/portfolio",
+        "build": "npm run build --workspaces",
+        "lint": "npm run lint --workspaces",
+        "preview": "npm run preview --workspace=@utube/portfolio"
+    },
+    "devDependencies": {
+        "prettier": "^3.0.0"
+    }
+}

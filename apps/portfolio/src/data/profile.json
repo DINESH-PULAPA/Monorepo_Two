@@ -1,0 +1,125 @@
+{
+    "basics": {
+        "name": "Rohan Deshmukh",
+        "label": "Senior Product Designer",
+        "greeting": "Hello, I'm",
+        "image": "/assets/img/home-perfil.png",
+        "email": "rohan.desh@gmail.com",
+        "summary": "User-centric UI/UX designer with 6+ years of experience crafting intuitive digital experiences for fintech and e-commerce platforms. Expert in design systems and prototyping.",
+        "location": {
+            "city": "Unknown",
+            "countryCode": "IN",
+            "country": "India"
+        },
+        "profiles": [
+            {
+                "network": "Phone",
+                "url": "tel:+919876543210",
+                "icon": "ri-phone-line"
+            },
+            {
+                "network": "Mail",
+                "url": "mailto:rohan.desh@gmail.com",
+                "icon": "ri-mail-line"
+            },
+            {
+                "network": "Dribbble",
+                "url": "https://dribbble.com/",
+                "icon": "ri-dribbble-line"
+            },
+            {
+                "network": "LinkedIn",
+                "url": "https://www.linkedin.com/",
+                "icon": "ri-linkedin-line"
+            }
+        ]
+    },
+    "projects": [
+        {
+            "id": "01",
+            "category": "Fintech",
+            "title": "FinGo App",
+            "technologies": [
+                "User Research",
+                "Figma",
+                "Prototyping"
+            ],
+            "image": "/assets/img/projects-1.png",
+            "description": "Redesigned the core payment flow for a major UPI app, reducing transaction drop-offs by 15%."
+        }
+    ],
+    "work": {
+        "experience": [
+            {
+                "title": "Senior Product Designer",
+                "company": "Razorpay",
+                "period": "2022 - Present",
+                "summary": "Leading the design team for the SME dashboard. Spearheaded the 'Razorpay X' dashboard refresh."
+            },
+            {
+                "title": "UI/UX Designer",
+                "company": "Swiggy",
+                "period": "2019 - 2021",
+                "summary": "Worked on the consumer-facing food delivery app. Designed the 'Swiggy Instamart' onboarding experience."
+            }
+        ],
+        "education": [
+            {
+                "title": "M.Des in Interaction Design",
+                "institution": "National Institute of Design (NID)",
+                "period": "2017 - 2019",
+                "summary": "Specialized in Interaction Design."
+            }
+        ]
+    },
+    "services": [
+        {
+            "title": "Design Tools",
+            "description": "Expertise in industry-standard design software.",
+            "skills": [
+                "Figma",
+                "Adobe XD",
+                "Protopie",
+                "Sketch",
+                "Illustrator",
+                "Photoshop",
+                "UI/UX Design"
+            ]
+        },
+        {
+            "title": "Core Skills",
+            "description": "Foundational skills for product design.",
+            "skills": [
+                "User Research",
+                "Wireframing",
+                "Prototyping",
+                "Interaction Design",
+                "Design Systems"
+            ]
+        },
+        {
+            "title": "UI/UX Expertise",
+            "description": "Specialized areas of focus.",
+            "skills": [
+                "Visual Design",
+                "Information Architecture",
+                "Usability Testing",
+                "Accessibility (WCAG)",
+                "Responsive Design",
+                "Design Thinking"
+            ]
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "Placeholder Client",
+            "rating": 5.0,
+            "comment": "Rohan is an exceptional designer who truly understands user needs."
+        },
+        {
+            "name": "Previous Manager",
+            "rating": 5.0,
+            "comment": "Great attention to detail and delivery."
+        }
+    ]
+}
