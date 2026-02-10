@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&family=Syne:wght@400;500;600;700;800&family=Unbounded:wght@200..900&family=Playfair+Display:wght@400;600;700&family=Mulish:wght@300;400;600&family=JetBrains+Mono:wght@300;400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -28,6 +28,7 @@ body {
     background-color: var(--body-color);
     color: var(--text-color);
     font-family: var(--body-font);
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 h1,
@@ -91,4 +92,245 @@ img {
 
 .main {
     overflow: hidden;
+}
+
+/* ============================
+   REAL-WORLD PROFESSIONAL THEMES
+   ============================ */
+
+/* Theme 1: Modern SaaS (The Standard) */
+/* Clean, trustworthy, high-polish look used by modern tech startups */
+body.variation-1 {
+    --hue: 220;
+    --body-color: #ffffff;
+    /* Clean White */
+    --container-color: #f8fafc;
+    /* Slate-50 for subtle contrast */
+    --title-color: #0f172a;
+    /* Slate-900 */
+    --text-color: #334155;
+    /* Slate-700 */
+    --text-color-light: #64748b;
+    /* Slate-500 */
+    --first-color: #4f46e5;
+    /* Indigo-600 */
+    --first-color-alt: #4338ca;
+    /* Indigo-700 */
+
+    /* Soft, rounded, friendly */
+    --radius-lg: 0.75rem;
+    /* 12px */
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-3xl: 2rem;
+    --radius-full: 9999px;
+
+    /* Soft diffuse shadows */
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    --body-font: "Inter", sans-serif;
+    --second-font: "Inter", sans-serif;
+}
+
+/* Modern SaaS Animations */
+body.variation-1 .button,
+body.variation-1 .card,
+body.variation-1 a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.variation-1 .button:hover,
+body.variation-1 .card:hover {
+    transform: translateY(-4px);
+}
+
+body.variation-1 .button:active {
+    animation: scale-down 0.2s forwards;
+}
+
+/* Theme 2: Pro Developer (The IDE) */
+/* Dark, functional, comfortable for long reading. VS Code inspired. */
+body.variation-2 {
+    --hue: 215;
+    --body-color: #0f172a;
+    /* Slate-900 */
+    --container-color: #1e293b;
+    /* Slate-800 */
+    --title-color: #f1f5f9;
+    /* Slate-100 */
+    --text-color: #94a3b8;
+    /* Slate-400 */
+    --text-color-light: #64748b;
+    /* Slate-500 */
+    --first-color: #38bdf8;
+    /* Sky-400 (Syntax Highlight Blue) */
+    --first-color-alt: #0ea5e9;
+    /* Sky-500 */
+
+    /* Functional rounding */
+    --radius-lg: 0.375rem;
+    /* 6px */
+    --radius-xl: 0.5rem;
+    --radius-2xl: 0.75rem;
+    --radius-3xl: 1rem;
+    --radius-full: 9999px;
+
+    /* Subtle depth via borders, not shadows */
+    --shadow-card: none;
+    --shadow-hover: none;
+
+    --body-font: "Inter", sans-serif;
+    --second-font: "JetBrains Mono", monospace;
+}
+
+body.variation-2 .container,
+body.variation-2 .nav,
+body.variation-2 .bg-container-color {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Developer Animations */
+body.variation-2 .button:hover,
+body.variation-2 a:hover {
+    text-shadow: 0 0 8px var(--first-color);
+}
+
+body.variation-2 .section__title::after {
+    content: '_';
+    animation: glow-pulse 1s infinite;
+    display: inline-block;
+}
+
+/* Theme 3: Creative Studio (The Designer) */
+/* High-contrast, bold, Awwwards agency style. */
+body.variation-3 {
+    --hue: 0;
+    --body-color: #ffffff;
+    --container-color: #ffffff;
+    --title-color: #000000;
+    --text-color: #000000;
+    --text-color-light: #444444;
+    --first-color: #000000;
+    --first-color-alt: #333333;
+
+    /* Sharp mixed with Pills */
+    --radius-lg: 0px;
+    --radius-xl: 0px;
+    --radius-2xl: 0px;
+    --radius-3xl: 999px;
+    --radius-full: 999px;
+
+    /* No shadows, just thick borders */
+    --shadow-card: none;
+    --shadow-hover: 4px 4px 0px #000000;
+
+    --body-font: "Space Grotesk", sans-serif;
+    --second-font: "Syne", sans-serif;
+}
+
+body.variation-3 .container,
+body.variation-3 .nav,
+body.variation-3 .section__title {
+    border: 2px solid #000000;
+    padding: 1rem;
+}
+
+body.variation-3 .nav {
+    border-bottom: 2px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+/* Creative Animations */
+body.variation-3 .button,
+body.variation-3 .card {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+body.variation-3 .button:hover,
+body.variation-3 .card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+body.variation-3 .button:active {
+    transform: translate(0, 0);
+    box-shadow: 0px 0px 0px #000000;
+}
+
+/* ============================
+   SKILLS SECTION UNIQUE HOVER EFFECTS
+   ============================ */
+
+/* Theme 1: Modern SaaS (Glass Reveal) */
+body.variation-1 #skills .bg-container-color {
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+body.variation-1 #skills .bg-container-color:hover {
+    transform: translateY(-5px);
+    background-color: #ffffff;
+    border-color: var(--first-color);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Force text color change on hover for visibility */
+body.variation-1 #skills .bg-container-color:hover h3,
+body.variation-1 #skills .bg-container-color:hover p,
+body.variation-1 #skills .bg-container-color:hover li {
+    color: #0f172a;
+    /* Slate-900 */
+}
+
+body.variation-1 #skills .bg-container-color:hover li {
+    border-color: #cbd5e1;
+    /* Slate-300 */
+    background-color: #f1f5f9;
+    /* Slate-100 */
+}
+
+/* Theme 2: Pro Developer (Code Focus) */
+body.variation-2 #skills .bg-container-color {
+    transition: all 0.2s ease;
+}
+
+body.variation-2 #skills .bg-container-color:hover {
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+    /* Sky Blue Glow */
+    border-color: #38bdf8;
+    /* Neon Blue Border */
+    transform: none;
+    /* Ensure no movement */
+}
+
+body.variation-2 #skills .bg-container-color:hover h3 {
+    color: #38bdf8;
+    /* Neon Blue Text */
+}
+
+/* Theme 3: Creative Studio (Pop Art) */
+body.variation-3 #skills .bg-container-color {
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid #000000;
+}
+
+body.variation-3 #skills .bg-container-color:hover {
+    transform: translate(-6px, -6px);
+    box-shadow: 8px 8px 0px #000000;
+    background-color: #FFF500;
+    /* Bright Yellow */
+}
+
+/* Force High Contrast Text */
+body.variation-3 #skills .bg-container-color:hover h3,
+body.variation-3 #skills .bg-container-color:hover p,
+body.variation-3 #skills .bg-container-color:hover li {
+    color: #000000;
+}
+
+body.variation-3 #skills .bg-container-color:hover li {
+    border-color: #000000;
+    background-color: rgba(255, 255, 255, 0.5);
 }

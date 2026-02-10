@@ -6,12 +6,9 @@ export const ThemeToggle = () => {
     const { theme, changeTheme } = useTheme();
 
     const themes = [
-        { id: 'variation-1', name: 'Original' },
-        { id: 'variation-2', name: 'Professional' },
-        { id: 'variation-3', name: 'Modern' },
-        { id: 'variation-4', name: 'Vibrant' },
-        { id: 'variation-5', name: 'Glass' },
-        { id: 'variation-6', name: 'Bold' }
+        { id: 'variation-1', name: 'Modern SaaS' },
+        { id: 'variation-2', name: 'Pro Developer' },
+        { id: 'variation-3', name: 'Creative Studio' }
     ];
 
     const handleThemeToggle = () => {

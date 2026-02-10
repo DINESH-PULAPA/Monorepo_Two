@@ -20,7 +20,7 @@ export const Services = ({ data }) => {
                                 <h3 className="text-2xl font-second font-semibold text-title-color mb-4">
                                     {service.title}
                                 </h3>
-                                <p className="text-text-color mb-8 leading-relaxed flex-grow">
+                                <p className="text-text-color mb-4 leading-relaxed">
                                     {service.description}
                                 </p>
 
