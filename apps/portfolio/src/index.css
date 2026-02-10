@@ -260,6 +260,58 @@ body.variation-3 .button:active {
     box-shadow: 0px 0px 0px #000000;
 }
 
+/* Theme 4: Elegant Editorial (The Publication) */
+/* Old-school New York Times vibe. Timeless, serif-heavy. */
+body.variation-4 {
+    --hue: 35;
+    --body-color: #FDFBF7;
+    /* Alabaster / Warm White */
+    --container-color: #F5F2EB;
+    /* Warm Grey/Beige */
+    --title-color: #1C1917;
+    /* Warm Black */
+    --text-color: #44403C;
+    /* Warm Charcoal */
+    --text-color-light: #78716C;
+    /* Stone */
+    --first-color: #047857;
+    /* Deep Emerald */
+    --first-color-alt: #065F46;
+    /* Darker Emerald */
+
+    /* Elegant, sharp but approachable */
+    --radius-lg: 2px;
+    --radius-xl: 4px;
+    --radius-2xl: 8px;
+    --radius-3xl: 12px;
+    --radius-full: 999px;
+
+    /* Paper-like shadows */
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+
+    --body-font: "Mulish", sans-serif;
+    --second-font: "Playfair Display", serif;
+}
+
+body.variation-4 .section__title {
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Editorial Animations */
+body.variation-4 .button,
+body.variation-4 .card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.variation-4 .button:hover,
+body.variation-4 .card:hover {
+    transform: translateY(-2px);
+    border-color: var(--first-color);
+}
+
 /* ============================
    SKILLS SECTION UNIQUE HOVER EFFECTS
    ============================ */
@@ -319,8 +371,8 @@ body.variation-3 #skills .bg-container-color {
 body.variation-3 #skills .bg-container-color:hover {
     transform: translate(-6px, -6px);
     box-shadow: 8px 8px 0px #000000;
-    background-color: #FFF500;
-    /* Bright Yellow */
+    background-color: #FF3333;
+    /* Vibrant Red */
 }
 
 /* Force High Contrast Text */
@@ -333,4 +385,23 @@ body.variation-3 #skills .bg-container-color:hover li {
 body.variation-3 #skills .bg-container-color:hover li {
     border-color: #000000;
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Theme 4: Elegant Editorial (Spotlight Warmth) */
+body.variation-4 #skills .bg-container-color {
+    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+    border-left: 1px solid transparent;
+}
+
+body.variation-4 #skills .bg-container-color:hover {
+    background-color: #E7E5E4;
+    /* Darker Warm Beige */
+    transform: translateX(4px);
+    border-left: 4px solid var(--first-color);
+    box-shadow: none;
+}
+
+body.variation-4 #skills .bg-container-color:hover h3 {
+    color: #064E3B;
+    /* Dark Emerald Text */
 }

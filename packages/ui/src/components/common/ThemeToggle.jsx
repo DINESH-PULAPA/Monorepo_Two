@@ -8,7 +8,8 @@ export const ThemeToggle = () => {
     const themes = [
         { id: 'variation-1', name: 'Modern SaaS' },
         { id: 'variation-2', name: 'Pro Developer' },
-        { id: 'variation-3', name: 'Creative Studio' }
+        { id: 'variation-3', name: 'Creative Studio' },
+        { id: 'variation-4', name: 'Elegant Editorial' }
     ];
 
     const handleThemeToggle = () => {
