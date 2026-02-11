@@ -163,10 +163,10 @@ body.variation-2 {
     /* Slate-400 */
     --text-color-light: #64748b;
     /* Slate-500 */
-    --first-color: #38bdf8;
-    /* Sky-400 (Syntax Highlight Blue) */
-    --first-color-alt: #0ea5e9;
-    /* Sky-500 */
+    --first-color: #a855f7;
+    /* Purple-500 */
+    --first-color-alt: #9333ea;
+    /* Purple-600 */
 
     /* Functional rounding */
     --radius-lg: 0.375rem;
@@ -349,17 +349,17 @@ body.variation-2 #skills .bg-container-color {
 }
 
 body.variation-2 #skills .bg-container-color:hover {
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
-    /* Sky Blue Glow */
-    border-color: #38bdf8;
-    /* Neon Blue Border */
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
+    /* Purple Glow */
+    border-color: #a855f7;
+    /* Neon Purple Border */
     transform: none;
     /* Ensure no movement */
 }
 
 body.variation-2 #skills .bg-container-color:hover h3 {
-    color: #38bdf8;
-    /* Neon Blue Text */
+    color: #a855f7;
+    /* Neon Purple Text */
 }
 
 /* Theme 3: Creative Studio (Pop Art) */
@@ -394,14 +394,17 @@ body.variation-4 #skills .bg-container-color {
 }
 
 body.variation-4 #skills .bg-container-color:hover {
-    background-color: #E7E5E4;
-    /* Darker Warm Beige */
+    background-color: #fef08a;
+    /* Yellow-200 for highlighting */
     transform: translateX(4px);
-    border-left: 4px solid var(--first-color);
+    border-left: 4px solid #ca8a04;
+    /* Dark Yellow/Gold Border */
     box-shadow: none;
+    color: #422006;
+    /* Dark Brown text for contrast */
 }
 
 body.variation-4 #skills .bg-container-color:hover h3 {
-    color: #064E3B;
-    /* Dark Emerald Text */
+    color: #854d0e;
+    /* Dark Gold Text */
 }
