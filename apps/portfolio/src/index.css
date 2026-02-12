@@ -108,14 +108,14 @@ body.variation-1 {
     /* Slate-50 for subtle contrast */
     --title-color: #0f172a;
     /* Slate-900 */
-    --text-color: #334155;
-    /* Slate-700 */
+    --text-color: #10b981;
+    /* Emerald-500 - Green for main text */
     --text-color-light: #64748b;
     /* Slate-500 */
-    --first-color: #4f46e5;
-    /* Indigo-600 */
-    --first-color-alt: #4338ca;
-    /* Indigo-700 */
+    --first-color: #10b981;
+    /* Emerald-500 - Green accent */
+    --first-color-alt: #059669;
+    /* Emerald-600 - Darker Green */
 
     /* Soft, rounded, friendly */
     --radius-lg: 0.75rem;
@@ -370,7 +370,7 @@ body.variation-1 #skills .bg-container-color:hover {
 body.variation-1 #skills .bg-container-color:hover h3,
 body.variation-1 #skills .bg-container-color:hover p {
     color: #ffffff;
-    /* White Text for Indigo */
+    /* White Text for Green Background */
 }
 
 body.variation-1 #skills .bg-container-color:hover li {
@@ -379,7 +379,7 @@ body.variation-1 #skills .bg-container-color:hover li {
     background-color: #f1f5f9;
     /* Slate-100 */
     color: var(--first-color);
-    /* Indigo Text for Contrast */
+    /* Green Text for Contrast */
 }
 
 /* Theme 2: Pro Developer (Code Focus) */
