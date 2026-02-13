@@ -1,8 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&family=Syne:wght@400;500;600;700;800&family=Unbounded:wght@200..900&family=Playfair+Display:wght@400;600;700&family=Mulish:wght@300;400;600&family=JetBrains+Mono:wght@300;400;700&display=swap");
-
+/* Google Fonts for all theme variations */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700;800&family=Work+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply font variables dynamically based on theme */
+@layer base {
+    body {
+        font-family: var(--body-font);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--second-font);
+    }
+
+    button {
+        font-family: var(--body-font);
+    }
+}
+
+/* Tailwind utility classes for theme fonts */
+.font-second {
+    font-family: var(--second-font) !important;
+}
+
+.font-body {
+    font-family: var(--body-font) !important;
+}
 
 :root {
     --header-height: 3.5rem;
@@ -98,46 +129,41 @@ img {
    REAL-WORLD PROFESSIONAL THEMES
    ============================ */
 
-/* Theme 1: Modern SaaS (The Standard) */
-/* Clean, trustworthy, high-polish look used by modern tech startups */
+/* Theme 1: Artistic (Purple/Magenta - Dark Mode) */
+/* Vibrant, creative, modern aesthetic */
 body.variation-1 {
-    --hue: 220;
-    --body-color: #ffffff;
-    /* Clean White */
-    --container-color: #f8fafc;
-    /* Slate-50 for subtle contrast */
-    --title-color: #0f172a;
-    /* Slate-900 */
-    --text-color: #475569;
-    /* Slate-600 - Dark gray for readability */
-    --text-color-light: #64748b;
-    /* Slate-500 */
-    --first-color: #10b981;
-    /* Emerald-500 - Green accent */
-    --first-color-alt: #059669;
-    /* Emerald-600 - Darker Green */
+    --hue: 290;
+    --body-color: #0F0B1F;
+    /* Deep purple-black */
+    --container-color: #1A1333;
+    /* Dark purple */
+    --title-color: #F5F3FF;
+    /* Off-white */
+    --text-color: #D4C5F9;
+    /* Light purple */
+    --text-color-light: #A78BFA;
+    /* Medium purple */
+    --first-color: #C026D3;
+    /* Magenta (CTA) */
+    --first-color-alt: #A21CAF;
+    /* Darker magenta */
 
-    /* Soft, rounded, friendly */
-    --radius-lg: 0.75rem;
-    /* 12px */
-    --radius-xl: 1rem;
-    --radius-2xl: 1.5rem;
-    --radius-3xl: 2rem;
+    /* Rounded, modern */
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-3xl: 32px;
     --radius-full: 9999px;
 
-    /* Soft diffuse shadows */
-    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    /* Glowing shadows */
+    --shadow-card: 0 2px 8px rgba(192, 38, 211, 0.15);
+    --shadow-hover: 0 8px 24px rgba(192, 38, 211, 0.25);
 
-    --body-font: "Inter", sans-serif;
+    --body-font: "Poppins", sans-serif;
     --second-font: "Inter", sans-serif;
 }
 
-/* Fix white text visibility on white background for variation-1 */
-body.variation-1 #home .text-white,
-body.variation-1 #contact .text-white {
-    color: var(--title-color) !important;
-}
+
 
 /* Modern SaaS Animations */
 body.variation-1 .button,
@@ -245,129 +271,79 @@ body.variation-2 .section__title::after {
     border: none;
 }
 
-/* Theme 3: Creative Studio (The Designer) */
-/* High-contrast, bold, Awwwards agency style. */
+/* Theme 3: Professional (Blue - Dark Mode) */
+/* Clean, corporate, trustworthy aesthetic */
 body.variation-3 {
-    --hue: 0;
-    --body-color: #ffffff;
-    --container-color: #ffffff;
-    --title-color: #000000;
-    --text-color: #000000;
-    /* Black for readability on white background */
-    --text-color-light: #444444;
-    --first-color: #FF3333;
-    /* Vibrant Red */
-    --first-color-alt: #cc0000;
+    --hue: 210;
+    --body-color: #0A1929;
+    /* Navy blue */
+    --container-color: #1E3A5F;
+    /* Dark blue */
+    --title-color: #E3F2FD;
+    /* Light blue-white */
+    --text-color: #90CAF9;
+    /* Sky blue */
+    --text-color-light: #64B5F6;
+    /* Medium blue */
+    --first-color: #1976D2;
+    /* Blue (CTA) */
+    --first-color-alt: #1565C0;
+    /* Darker blue */
 
-    /* Sharp mixed with Pills */
-    --radius-lg: 0px;
-    --radius-xl: 0px;
-    --radius-2xl: 0px;
-    --radius-3xl: 999px;
-    --radius-full: 999px;
+    /* Clean, professional */
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-3xl: 20px;
+    --radius-full: 9999px;
 
-    /* No shadows, just thick borders */
-    --shadow-card: none;
-    --shadow-hover: 4px 4px 0px #000000;
+    /* Professional shadows */
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.3);
 
-    --body-font: "Space Grotesk", sans-serif;
-    --second-font: "Syne", sans-serif;
+    --body-font: "Montserrat", sans-serif;
+    --second-font: "Space Grotesk", sans-serif;
 }
 
-/* Fix white text visibility on white background for variation-3 */
-body.variation-3 #home .text-white,
-body.variation-3 #contact .text-white {
-    color: var(--title-color) !important;
-}
 
-body.variation-3 .container,
-body.variation-3 .nav,
-body.variation-3 .section__title {
-    border: 2px solid #000000;
-    padding: 1rem;
-}
 
-body.variation-3 .nav {
-    border-bottom: 2px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
 
-/* Creative Animations */
-body.variation-3 .button,
-body.variation-3 .card {
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
 
-body.variation-3 .button:hover,
-body.variation-3 .card:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 6px 6px 0px #000000;
-}
-
-body.variation-3 .button:active {
-    transform: translate(0, 0);
-    box-shadow: 0px 0px 0px #000000;
-}
-
-/* Theme 4: Elegant Editorial (The Publication) */
-/* Old-school New York Times vibe. Timeless, serif-heavy. */
+/* Theme 4: Traditional (Gold/Brown - Dark Mode) */
+/* Classic, formal, timeless aesthetic */
 body.variation-4 {
     --hue: 35;
-    --body-color: #FDFBF7;
-    /* Alabaster / Warm White */
-    --container-color: #F5F2EB;
-    /* Warm Grey/Beige */
-    --title-color: #1C1917;
-    /* Warm Black */
-    --text-color: #44403C;
-    /* Warm Charcoal for readability */
-    --text-color-light: #78716C;
-    /* Stone-500 */
-    --first-color: #047857;
-    /* Deep Emerald - matches text-color */
-    --first-color-alt: #065F46;
-    /* Darker Emerald */
+    --body-color: #1A1410;
+    /* Dark brown */
+    --container-color: #2D2419;
+    /* Brown */
+    --title-color: #F5F1E8;
+    /* Cream */
+    --text-color: #C9B99A;
+    /* Tan */
+    --text-color-light: #A89968;
+    /* Muted tan */
+    --first-color: #B8860B;
+    /* Goldenrod (CTA) */
+    --first-color-alt: #9A7209;
+    /* Darker goldenrod */
 
-    /* Elegant, sharp but approachable */
-    --radius-lg: 2px;
-    --radius-xl: 4px;
+    /* Minimal rounded */
+    --radius-lg: 4px;
+    --radius-xl: 6px;
     --radius-2xl: 8px;
     --radius-3xl: 12px;
-    --radius-full: 999px;
+    --radius-full: 9999px;
 
-    /* Paper-like shadows */
-    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    /* Classic shadows */
+    --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.4);
 
-    --body-font: "Mulish", sans-serif;
+    --body-font: "IBM Plex Sans", sans-serif;
     --second-font: "Playfair Display", serif;
 }
 
-body.variation-4 .section__title {
-    font-style: italic;
-    font-weight: 700;
-}
 
-/* Fix white text visibility on light background for variation-4 */
-body.variation-4 #home .text-white,
-body.variation-4 #contact .text-white {
-    color: var(--title-color) !important;
-}
-
-/* Editorial Animations */
-body.variation-4 .button,
-body.variation-4 .card {
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-body.variation-4 .button:hover,
-body.variation-4 .card:hover {
-    transform: translateY(-2px);
-    border-color: var(--first-color);
-}
 
 /* ============================
    SKILLS SECTION UNIQUE HOVER EFFECTS
@@ -380,9 +356,10 @@ body.variation-1 #skills .bg-container-color {
 
 body.variation-1 #skills .bg-container-color:hover {
     transform: translateY(-5px);
-    background-color: var(--text-color);
-    border-color: var(--text-color);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background-color: var(--first-color);
+    /* Magenta background */
+    border-color: var(--first-color);
+    box-shadow: 0 20px 25px -5px rgba(192, 38, 211, 0.3), 0 10px 10px -5px rgba(192, 38, 211, 0.2);
 }
 
 /* Force text color change on hover for visibility */
@@ -393,12 +370,10 @@ body.variation-1 #skills .bg-container-color:hover p {
 }
 
 body.variation-1 #skills .bg-container-color:hover li {
-    border-color: #cbd5e1;
-    /* Slate-300 */
-    background-color: #f1f5f9;
-    /* Slate-100 */
-    color: var(--text-color);
-    /* Match heading color */
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    /* White text on magenta */
 }
 
 /* Theme 2: Executive Luxury (Green Edition) */
@@ -422,60 +397,50 @@ body.variation-2 #skills .bg-container-color:hover p {
 
 /* Skill pills maintain their hover behavior from component (text-first-color) */
 
-/* Theme 3: Creative Studio (Pop Art) */
+/* Theme 3: Professional (Blue Accent) */
 body.variation-3 #skills .bg-container-color {
-    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid #000000;
+    transition: all 0.3s ease;
 }
 
 body.variation-3 #skills .bg-container-color:hover {
-    transform: translate(-6px, -6px);
-    box-shadow: 8px 8px 0px #000000;
-    transform: translate(-6px, -6px);
-    box-shadow: 8px 8px 0px #000000;
-    background-color: var(--text-color);
-    /* Match heading color */
+    background-color: var(--first-color);
+    /* Blue background */
+    border-color: var(--first-color);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
 }
 
-/* Force High Contrast Text */
 body.variation-3 #skills .bg-container-color:hover h3,
-body.variation-3 #skills .bg-container-color:hover p,
-body.variation-3 #skills .bg-container-color:hover li {
-    color: #ffffff;
+body.variation-3 #skills .bg-container-color:hover p {
+    color: #FFFFFF;
+    /* White text on blue */
 }
 
 body.variation-3 #skills .bg-container-color:hover li {
-    border-color: #ffffff;
     background-color: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Theme 4: Elegant Editorial (Spotlight Warmth) */
+/* Theme 4: Traditional (Goldenrod Accent) */
 body.variation-4 #skills .bg-container-color {
-    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
-    border-left: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
 body.variation-4 #skills .bg-container-color:hover {
     background-color: var(--first-color);
-    /* Emerald */
-    transform: translateX(4px);
-    border-left: 4px solid #065F46;
-    /* Darker Emerald Border */
-    box-shadow: none;
-    color: #000000;
-    /* Black text for maximum contrast */
+    /* Goldenrod background */
+    border-color: var(--first-color);
+    box-shadow: 0 8px 16px rgba(184, 134, 11, 0.3);
 }
 
 body.variation-4 #skills .bg-container-color:hover h3,
 body.variation-4 #skills .bg-container-color:hover p {
-    color: #ffffff;
-    /* White Text for Emerald Background */
+    color: #1A1410;
+    /* Dark brown text on goldenrod */
 }
 
 body.variation-4 #skills .bg-container-color:hover li {
-    background-color: #ffffff;
-    /* White Chip Background */
-    color: var(--first-color);
-    /* Emerald Text */
-    border-color: #ffffff;
+    background-color: rgba(26, 20, 16, 0.2);
+    color: #1A1410;
+    border-color: rgba(26, 20, 16, 0.3);
 }
