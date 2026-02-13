@@ -4,16 +4,16 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                // Colors from UTube-code style.css variables
-                "first-color": "hsl(var(--hue), 60%, 64%)",
-                "first-color-alt": "hsl(var(--hue), 80%, 56%)",
-                "first-color-alt-2": "hsl(var(--hue), 60%, 56%)",
-                "first-color-light": "hsl(var(--hue), 60%, 74%)",
-                "title-color": "hsl(240, 8%, 95%)",
-                "text-color": "hsl(240, 8%, 70%)",
-                "text-color-light": "hsl(240, 8%, 50%)",
-                "body-color": "hsl(240, 100%, 2%)",
-                "container-color": "hsl(240, 8%, 6%)",
+                // Colors from CSS variables - using var() to reference the actual CSS custom properties
+                "first-color": "var(--first-color)",
+                "first-color-alt": "var(--first-color-alt)",
+                "first-color-alt-2": "var(--first-color-alt-2, var(--first-color-alt))",
+                "first-color-light": "var(--first-color-light, var(--first-color))",
+                "title-color": "var(--title-color)",
+                "text-color": "var(--text-color)",
+                "text-color-light": "var(--text-color-light)",
+                "body-color": "var(--body-color)",
+                "container-color": "var(--container-color)",
             },
             fontFamily: {
                 body: ['"Montserrat"', "sans-serif"],

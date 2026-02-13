@@ -108,8 +108,8 @@ body.variation-1 {
     /* Slate-50 for subtle contrast */
     --title-color: #0f172a;
     /* Slate-900 */
-    --text-color: #10b981;
-    /* Emerald-500 - Green for main text */
+    --text-color: #475569;
+    /* Slate-600 - Dark gray for readability */
     --text-color-light: #64748b;
     /* Slate-500 */
     --first-color: #10b981;
@@ -131,6 +131,12 @@ body.variation-1 {
 
     --body-font: "Inter", sans-serif;
     --second-font: "Inter", sans-serif;
+}
+
+/* Fix white text visibility on white background for variation-1 */
+body.variation-1 #home .text-white,
+body.variation-1 #contact .text-white {
+    color: var(--title-color) !important;
 }
 
 /* Modern SaaS Animations */
@@ -160,14 +166,14 @@ body.variation-2 {
     /* Stone-900 (Dark Charcoal) */
     --title-color: #fafaf9;
     /* Stone-50 (Off-White) */
-    --text-color: #d6d3d1;
-    /* Stone-300 (Light Gray) */
+    --text-color: #10b981;
+    /* Emerald-500 (Green) - matches primary color */
     --text-color-light: #a8a29e;
     /* Stone-400 (Muted Gray) */
-    --first-color: #d4af37;
-    /* Metallic Gold */
-    --first-color-alt: #b4941f;
-    /* Darker Gold */
+    --first-color: #10b981;
+    /* Emerald-500 (Green) */
+    --first-color-alt: #059669;
+    /* Emerald-600 (Darker Green) */
 
     /* Refined Radius */
     --radius-lg: 4px;
@@ -178,8 +184,8 @@ body.variation-2 {
 
     /* Subtle Luxury Glow */
     --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 0 15px rgba(212, 175, 55, 0.15);
-    /* Gold Glow */
+    --shadow-hover: 0 0 15px rgba(16, 185, 129, 0.15);
+    /* Green Glow */
 
     --body-font: "Montserrat", sans-serif;
     /* Geometric Modern */
@@ -222,11 +228,11 @@ body.variation-2 .button:hover,
 body.variation-2 .card:hover,
 body.variation-2 a:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
-    /* Gold Glow */
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+    /* Green Glow */
     background: var(--first-color);
-    color: #000;
-    /* Black text on Gold background */
+    color: #fff;
+    /* White text on Green background */
 }
 
 body.variation-2 .section__title::after {
@@ -247,6 +253,7 @@ body.variation-3 {
     --container-color: #ffffff;
     --title-color: #000000;
     --text-color: #000000;
+    /* Black for readability on white background */
     --text-color-light: #444444;
     --first-color: #FF3333;
     /* Vibrant Red */
@@ -265,6 +272,12 @@ body.variation-3 {
 
     --body-font: "Space Grotesk", sans-serif;
     --second-font: "Syne", sans-serif;
+}
+
+/* Fix white text visibility on white background for variation-3 */
+body.variation-3 #home .text-white,
+body.variation-3 #contact .text-white {
+    color: var(--title-color) !important;
 }
 
 body.variation-3 .container,
@@ -309,11 +322,11 @@ body.variation-4 {
     --title-color: #1C1917;
     /* Warm Black */
     --text-color: #44403C;
-    /* Warm Charcoal */
+    /* Warm Charcoal for readability */
     --text-color-light: #78716C;
-    /* Stone */
+    /* Stone-500 */
     --first-color: #047857;
-    /* Deep Emerald */
+    /* Deep Emerald - matches text-color */
     --first-color-alt: #065F46;
     /* Darker Emerald */
 
@@ -335,6 +348,12 @@ body.variation-4 {
 body.variation-4 .section__title {
     font-style: italic;
     font-weight: 700;
+}
+
+/* Fix white text visibility on light background for variation-4 */
+body.variation-4 #home .text-white,
+body.variation-4 #contact .text-white {
+    color: var(--title-color) !important;
 }
 
 /* Editorial Animations */
@@ -361,8 +380,8 @@ body.variation-1 #skills .bg-container-color {
 
 body.variation-1 #skills .bg-container-color:hover {
     transform: translateY(-5px);
-    background-color: var(--first-color);
-    border-color: var(--first-color);
+    background-color: var(--text-color);
+    border-color: var(--text-color);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
@@ -378,34 +397,30 @@ body.variation-1 #skills .bg-container-color:hover li {
     /* Slate-300 */
     background-color: #f1f5f9;
     /* Slate-100 */
-    color: var(--first-color);
-    /* Green Text for Contrast */
+    color: var(--text-color);
+    /* Match heading color */
 }
 
-/* Theme 2: Pro Developer (Code Focus) */
+/* Theme 2: Executive Luxury (Green Edition) */
 body.variation-2 #skills .bg-container-color {
     transition: all 0.2s ease;
 }
 
 body.variation-2 #skills .bg-container-color:hover {
-    background-color: var(--first-color);
-    /* Gold Background */
+    background-color: var(--text-color);
+    /* Match heading color */
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-    border-color: var(--first-color);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    border-color: var(--text-color);
 }
 
 body.variation-2 #skills .bg-container-color:hover h3,
 body.variation-2 #skills .bg-container-color:hover p {
-    color: #000000;
-    /* Black Text for Contrast */
+    color: var(--title-color);
+    /* Maintain original title/text color */
 }
 
-body.variation-2 #skills .bg-container-color:hover li {
-    color: var(--first-color);
-    /* Gold Text for Black Chips */
-    border-color: #000000;
-}
+/* Skill pills maintain their hover behavior from component (text-first-color) */
 
 /* Theme 3: Creative Studio (Pop Art) */
 body.variation-3 #skills .bg-container-color {
@@ -418,8 +433,8 @@ body.variation-3 #skills .bg-container-color:hover {
     box-shadow: 8px 8px 0px #000000;
     transform: translate(-6px, -6px);
     box-shadow: 8px 8px 0px #000000;
-    background-color: var(--first-color);
-    /* Vibrant Red */
+    background-color: var(--text-color);
+    /* Match heading color */
 }
 
 /* Force High Contrast Text */
